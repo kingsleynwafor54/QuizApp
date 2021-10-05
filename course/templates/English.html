@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if question %}
+
+
+
+
+<ol>
+         {% for questions in question %}
+        <li>{{ questions.text }}</li>
+
+
+
+<label><input type="radio" name="select" /><span>A</span> {{ questions.option_one }}</label>
+<label><input type="radio" name="select" /><span>B</span> {{ questions.option_two }}</label>
+<label><input type="radio" name="select" /><span>C</span> {{ questions.option_three }}</label>
+<label><input type="radio" name="select" /><span>D</span> {{ questions.option_four }}</label>
+    {% endfor %}
+    </ol>
+{% endif %}
+</body>
+</html>

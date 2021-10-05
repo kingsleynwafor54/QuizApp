@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if course %}
+     <h3>Here are all my Courses</h3>
+    <ul>
+    {% for courses in course %}
+   <button><li><a href="/hello1/{{ courses.id }}">{{courses.name}}</a></li></button>
+    {% endfor %}
+    </ul>
+{% endif %}
+</body>
+</html>

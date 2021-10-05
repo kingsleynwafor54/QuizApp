@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+    label {display: block; padding: 5px; position: relative; padding-left: 20px;}
+label input {display: none;}
+label span {border: 1px solid #ccc; width: 15px; height: 15px; position: absolute; overflow: hidden; line-height: 1; text-align: center; border-radius: 100%; font-size: 10pt; left: 0; top: 50%; margin-top: -7.5px;}
+input:checked + span {background: #ccf; border-color: #ccf;}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if question %}
+
+<ol>
+         {% for questions in question %}
+        <li>{{ questions.text }}</li>
+
+
+
+<label><input type="radio" name="select" /><span>A</span> {{ questions.option_one }}</label>
+<label><input type="radio" name="select" /><span>B</span> {{ questions.option_two }}</label>
+<label><input type="radio" name="select" /><span>C</span> {{ questions.option_three }}</label>
+<label><input type="radio" name="select" /><span>D</span> {{ questions.option_four }}</label>
+    {% endfor %}
+    </ol>
+{% endif %}
+</body>
+</html>
